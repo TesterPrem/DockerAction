@@ -2,25 +2,18 @@ name: Apply Created Action
 on: [push, pull_request]
 
 jobs:
-  Check-the-Node:
-    container: node:19.7.0
+  Greet:
     runs-on: ubuntu-latest
     
-    steps:
-      - name: Check out the versions
-        run: |
-          echo --node-version
-          echo --npm-version
+    steps:          
+    - name: Greet Someone
+      id: hello
+      uses: actions/prem-docker-action@v1
+      with:
+         who-to-greet: 'KALAIVANI'
           
-          
-      - name: Greet Someone
-        id: hello
-        uses: actions/prem-docker-action@v1
-        with:
-          who-to-greet: 'KALAIVANI'
-          
-      - name: get the output
-        run: echo ${{ steps.hello.outputs.time }}
+    - name: get the output
+      run: echo ${{ steps.hello.outputs.time }}
           
           
     
