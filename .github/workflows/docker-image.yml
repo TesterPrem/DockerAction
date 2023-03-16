@@ -14,8 +14,8 @@ jobs:
         with:
           who-to-greet: KM PREMANANDH
           
-      - name: Get Uotput time
-        run: The time was ${{steps.greet.outputs.time }}
+      - name: Get Output time
+        run: echo The time was ${{steps.greet.outputs.time }}
         
         
           
