@@ -1,4 +1,4 @@
-name: 'Docker Action'
+name: 'Prem Docker-Action'
 description: 'Greet Someone'
 
 inputs:
