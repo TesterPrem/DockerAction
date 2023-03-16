@@ -1,0 +1,18 @@
+name: 'Create Docker Action'
+description: 'Greet Someone'
+
+inputs:
+  who-to-greet: 
+    description: 'Warmly Greet'
+    required: true
+    default: 'Universe'
+
+outputs:
+  time:
+    description: 'Record the time of Greet'
+
+runs:
+  image: 'Dockerfile'
+  runs: 'docker'
+  args:
+    ${{ inputs.who-to-greet }}
